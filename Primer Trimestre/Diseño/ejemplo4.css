@@ -1,0 +1,54 @@
+/*estilos para ejemplo4
+
+/*usamos diferentes id para caracterizar con propiedades css
+-un contenedor
+	-una cabecera
+	-unas columnas (dos)
+		-un menu
+		-un contenido
+	-un pie*/
+div{
+	font-size: 1.2em;
+}
+div#contenedor{
+	margin: 10px auto;
+	width: 85%;
+}
+div#cabecera{
+	background-color: #000;
+	color: #f96;
+	padding: 2%;
+}
+div#columnas{
+	background-color: #ddd;
+	overflow: hidden;
+	padding-bottom: 2%;
+
+}
+div#menu{
+	background-color: #999;
+	float: left;
+	width: 21%;
+	margin-bottom: -32767px;
+	min-width: 120px;
+	padding: 2%;
+	padding-bottom: 32767px;
+}
+div#contenido{
+    background-color:#ddd;
+    float:left;
+    width:71%;
+    margin-bottom:-32767px;
+    max-width:-moz-calc(92% - 120px);
+    max-width:-webkit-calc(92% - 120px);
+    max-width:calc(92% - 120px);
+    padding:2%;
+    padding-bottom:32767px;
+}
+div#pie{
+	background-color: #bbb;
+	clear: both;
+	color: #537;
+	padding: 2%;
+	text-align: center;
+}

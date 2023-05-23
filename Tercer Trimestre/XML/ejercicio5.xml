@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<listaventas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="ejercicio5.xsd">
+    <venta>
+        <ventacredito>
+            <fechafinpago>2023-03-01</fechafinpago>
+            <cantidad>500.00</cantidad>
+            <comprador>Juan Gómez</comprador>
+            <vendedor>Marcos Gutiérrez</vendedor>
+            <factura>12345</factura>
+        </ventacredito>
+    </venta>
+    <venta>
+        <ventainmediata>
+            <cantidad>1000.00</cantidad>
+            <divisa>USD</divisa>
+            <comprador>Marcos Gutiérrez</comprador>
+            <vendedor>Juan Gómez</vendedor>
+            <factura>98765</factura>
+        </ventainmediata>
+    </venta>
+</listaventas>

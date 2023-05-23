@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<listacursos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="ejercicioOCHO.xsd">
+    <cursos>
+        <alumno>
+            <dni>44e</dni>
+            <nombre>Juan</nombre>
+            <apellidoUno>Sanchez</apellidoUno>
+            <listaasignaturas codigo="LM1">
+                <nombre>Leng Marcas</nombre>
+                <profesor>
+                    <nrp>8</nrp>
+                    <nombre>Oscar</nombre>
+                    <apellidoUno>Gomez</apellidoUno>
+                </profesor>
+            </listaasignaturas>
+        </alumno>
+        <alumno>
+            <dni>55Q</dni>
+            <nombre>Luis</nombre>
+            <apellidoUno>Perez</apellidoUno>
+            <listaasignaturas codigo="ARM">
+                <nombre>Leng Marcas</nombre>
+                <profesor>
+                    <nrp>8</nrp>
+                    <nombre>Oscar</nombre>
+                    <apellidoUno>Gomez</apellidoUno>
+                </profesor>
+            </listaasignaturas>
+        </alumno>
+    </cursos>
+</listacursos>

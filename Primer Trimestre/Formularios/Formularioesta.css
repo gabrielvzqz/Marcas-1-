@@ -1,0 +1,11 @@
+body{
+	content: center;
+}
+div{
+	text-align: center;
+	position: relative;
+	width: 50%;
+	height: 95%;
+	background-color: #EEEAE9;
+	border-color: #E7E4E3;
+}

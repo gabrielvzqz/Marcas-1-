@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!--raíz de documentos-->
+    <xs:element name="listafacturas" type="tipoLista"/>
+
+    <!--Las facturas tienen un atributo opcional fecha-->
+    <xs:complexType name="tipoLista">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="factura" type="tipoFactura"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoFactura">
+        <xs:sequence>
+            <xs:element name="emisor" type="tipoRepetido"/>
+            <xs:element name="pagador" type="tipoRepetido"/>
+            <xs:element name="importe" type="xs:float"/>
+        </xs:sequence>
+        <xs:attribute name="fecha" type="xs:date" use="required"/>
+    </xs:complexType>
+
+    <!--el emisor y el pagador tienen un atributo cif-->
+    <xs:complexType name="tipoRepetido">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="volumen" minOccurs="0" type="xs:float"/>
+        </xs:sequence>
+        <xs:attribute name="cif" type="xs:string" use="required"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,50 @@
+body {
+    margin: 40px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 187px);
+    grid-template-rows: repeat(6, 100px);
+    justify-content: center;
+    align-content: end;
+}
+.NavigationBar{
+grid-column: 1 / 4;
+grid-row: 1;
+background-color: beige;
+}
+
+.Header {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    background-color: pink;
+}
+.Sidebar{
+    grid-column: 1;
+    grid-row: 3/5;
+    background-color: purple;
+}
+
+.MainContent {
+    grid-column: 2/4;
+    grid-row: 3/5;
+    background-color: cyan;
+}
+.Aside1{
+    grid-column: 1;
+    background-color: red;
+}
+.Aside2{
+    grid-column: 2;
+    background-color: green;
+}
+.Aside3{
+    grid-column: 3;
+    background-color: purple;
+}
+
+.Footer {
+    grid-column: 1 / 4;
+    background-color: brown;
+}

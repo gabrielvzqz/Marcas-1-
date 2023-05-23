@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="listado" type="tlistado"/>
+    <xsd:complexType name="tlistado">
+        <xsd:sequence>
+            <xsd:element name="futuro" type="tfuturos" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="divisa" type="tdivisas" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="bono" type="tbono" maxOccurs="unbounded"></xsd:element>
+            <xsd:element name="letra" type="tletras" maxOccurs="unbounded"></xsd:element>
+
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="tfuturos">
+        <xsd:sequence>
+            <xsd:element name="producto" type="xsd:string"></xsd:element>
+            <xsd:element name="mercado" type="xsd:string"/>
+            <xsd:element name="ciudad_procedencia" type="ciudad"/>
+        </xsd:sequence>
+        <xsd:attribute type="xsd:string" name="precio"/>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="tdivisas">
+        <xsd:sequence>
+            <xsd:element name="nombre_divisa" type="xsd:string"/>
+            <xsd:element name="tipo_de_cambio" type="xsd:string" maxOccurs="unbounded"/>
+            <xsd:element name="ciudad_procedencia" type="ciudad"/>
+        </xsd:sequence>
+        <xsd:attribute name="precio" type="xsd:int"/>
+        <xsd:attribute name="estable" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+
+
+
+    <!--  <xsd:complexType name="ciudad">
+          <xsd:choice>
+              <xsd:element name="madrid"/>
+              <xsd:element name="nueva_york"/>
+              <xsd:element name="frankfurt"/>
+              <xsd:element name="tokio"/>
+          </xsd:choice>
+      </xsd:complexType>
+      -->
+    <xsd:simpleType name="ciudad">
+
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="madrid"/>
+            <xsd:enumeration value="frankfurt"/>
+            <xsd:enumeration value="tokio"/>
+            <xsd:enumeration value="New York"/>
+        </xsd:restriction>
+
+    </xsd:simpleType>
+
+
+    <xsd:complexType name="tbono">
+        <xsd:sequence>
+            <xsd:element name="pais_de_procedencia" type="xsd:string"/>
+            <xsd:element name="valor_deseado" type="xsd:int"/>
+            <xsd:element name="valor_minimo" type="xsd:int"/>
+            <xsd:element name="valor_maximo" type="xsd:int"/>
+            <xsd:element name="ciudad_procedencia" type="ciudad"/>
+
+        </xsd:sequence>
+        <xsd:attribute name="precio" type="xsd:int"/>
+        <xsd:attribute name="estable" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="tletras">
+        <xsd:sequence>
+            <xsd:element name="tipo_de_interes" type="xsd:string"/>
+            <xsd:element name="pais_emisor" type="tpais_emisor"/>
+            <xsd:element name="ciudad_procedencia" type="ciudad"/>
+        </xsd:sequence>
+
+        <xsd:attribute name="precio" type="xsd:int"/>
+
+    </xsd:complexType>
+    <xsd:simpleType name="tpais_emisor">
+
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="españa" />
+            <xsd:enumeration value="EEUU"/>
+            <xsd:enumeration value="alemania"/>
+            <xsd:enumeration value="japon"/>
+        </xsd:restriction>
+
+    </xsd:simpleType>
+</xsd:schema>

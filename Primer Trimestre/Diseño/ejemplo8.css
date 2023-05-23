@@ -1,0 +1,23 @@
+#contenedor{
+	border: 1px solid black;
+	width: 80%;
+	margin: 30px auto;
+	padding: 10px;
+	background-color: aliceblue;
+	display: flex ;
+}
+#column1{
+	float: left;
+	width: 30%;
+	margin: 0.5em;
+}
+#column2{
+	float: left;
+	width: 30%;
+	margin: 0.5em;
+}
+#column3{
+	float: left;
+	width: 30%;
+	margin: 0.5em;
+}

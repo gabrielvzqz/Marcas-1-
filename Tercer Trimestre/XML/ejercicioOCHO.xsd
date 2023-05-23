@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <!--elemento raiz listacursos-->
+    <xs:element name="listacursos" type="tipoLista"/>
+    
+    <xs:complexType name="tipoLista">
+        <xs:sequence>
+            <xs:element name="cursos" type="tipoCurso" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="tipoCurso">
+        <xs:sequence>
+            <xs:element name="alumno" type="tipoAlumno" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--declaracion de grupo de algo-->
+    <xs:complexType name="tipoAlumno">
+        <xs:sequence>
+            <xs:group ref="tipoDatosAlumno"/>
+            <xs:element name="listaasignaturas" type="tipoListaAsignaturas"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoListaAsignaturas">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="profesor" type="tipoProfesor"/>
+        </xs:sequence>
+        <xs:attribute name="codigo" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="tipoProfesor">
+        <xs:sequence>
+            <xs:element name="nrp" type="xs:string"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="apellidoUno" type="xs:string"/>
+            <xs:element name="apellidoDos" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:group name="tipoDatosAlumno">
+        <xs:sequence>
+            <xs:element name="dni" type="xs:string"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="apellidoUno" type="xs:string"/>
+            <xs:element name="apellidoDos" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="datosBasicos">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="ap1" type="xs:string"/>
+            <xs:element name="ap2" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+    <!--como evitar la duplicidad de declaracion de nombre ap1 y ap2-->
+</xs:schema>

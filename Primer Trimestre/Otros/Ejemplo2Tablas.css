@@ -1,0 +1,20 @@
+body{
+	background-color: grey;
+}
+div{
+	width: 35%;
+	margin: auto;
+	text-align: center;
+	background-color: lightgrey;
+}
+table{
+	width: 100%;
+	border: 1px solid black;
+	margin: auto;
+	text-align: left;
+	background-color: white;
+	border-collapse: collapse;
+}
+td{
+	border: 1px solid black;
+}

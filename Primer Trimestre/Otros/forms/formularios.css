@@ -1,0 +1,14 @@
+div{
+	width: 60%;
+	margin: auto;
+	background-color: #;
+}
+fieldset{
+	margin: 10px;
+}
+select{
+	margin: 10px;
+}
+legend{
+	color: hotpink;
+}

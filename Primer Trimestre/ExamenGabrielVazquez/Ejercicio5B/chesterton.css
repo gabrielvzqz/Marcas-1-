@@ -1,0 +1,17 @@
+body{ 
+	margin:  auto;
+	background-color:  #5D4037;
+	color:  white;
+	font-family: arial;
+	font-size: 1 em;
+	text-align: center;
+}
+h1{ 
+	margin: auto;
+	font-size: auto;
+	text-align: center;
+}
+p{
+	line-height: initial; 
+}
+

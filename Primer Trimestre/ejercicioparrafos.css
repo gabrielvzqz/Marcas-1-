@@ -1,0 +1,20 @@
+/*Estilos para utilizar id y class*/
+
+	p#uno{ color: green;
+	font-size: 1em;
+	font-family: Times new roman;
+}
+	p#dos{
+	color: blue;
+	font-size: 1.5em;	
+	font-family: Comic sans-serif;
+}
+	p#tres{
+	color: orangered;
+	font-size: 2em;
+	font-family: Comic Sans MS;
+}
+	.fami{
+	text-decoration: overline;
+	text-transform: uppercase;
+}

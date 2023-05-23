@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<factura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="Ejercicio1BExamen.xsd" FechaFactura="2013-12-12" NumeroFactura="27">
+    <DatosEmisor>
+        <Nombre>Librería Pérez</Nombre>
+        <CIF>44555666B</CIF>
+        <Telefono>777888999</Telefono>
+    </DatosEmisor>
+
+    <DatosCliente>
+        <Nombre>Biblioteca Txantrea</Nombre>
+        <CIF>33111222A</CIF>
+        <Telefono>333999444</Telefono>
+    </DatosCliente>
+
+    <DetalleFactura Importe="86.12€">
+        <Articulo CodigoArticulo="AW7" Tipo="Libro">
+            <Descripcion>Analítica Web 2.0</Descripcion>
+            <Cantidad>1</Cantidad>
+            <Si/>
+            <PVP>25.12€</PVP>
+        </Articulo>
+        <Articulo CodigoArticulo="CP5" Tipo="DVD">
+            <Descripcion>Cursp de HTML</Descripcion>
+            <Cantidad>2</Cantidad>
+            <No/>
+            <PVP>30.5€</PVP>
+        </Articulo>
+    </DetalleFactura>
+</factura>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="listaventas" type="tipoventa"/>
+    <xs:complexType name="tipoventa">
+        <xs:sequence>
+            <xs:element name="venta" type="ventatipoobjeto" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ventatipoobjeto">
+        <xs:choice>
+            <xs:element name="ventacredito" type="tipoventacredito"/>
+            <xs:element name="ventainmediata" type="tipoventainmediata"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="tipoventacredito">
+        <xs:sequence>
+            <xs:element name="fechafinpago" type="xs:date" minOccurs="0"/>
+            <xs:element name="cantidad" type="xs:double" minOccurs="1"/>
+            <xs:element name="comprador" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="vendedor" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="factura" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tipoventainmediata">
+        <xs:sequence>
+            <xs:element name="cantidad" type="xs:double" minOccurs="1"/>
+            <xs:element name="divisa" type="xs:string" minOccurs="1"/>
+            <xs:element name="comprador" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="vendedor" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="factura" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

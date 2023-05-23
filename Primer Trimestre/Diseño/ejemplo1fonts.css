@@ -1,0 +1,46 @@
+/* CSS PARA FONTS */
+p{
+	font: italic bold 30px arial, sans-serif;
+}
+#contenedor{
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	background-color: #eeccdd;
+}
+h1, h2, h3{
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: 6px;
+}
+
+.caja{
+	width: 20%;
+	background-color: yellow;
+	float: left;
+	padding: 10px;
+	margin: 20px;
+	border: 2px solid peru;
+}
+.uno{
+	font-family: arial, verdana, sans-serif;
+	font-style: italic;
+	font-size: 12pt;
+	text-align: right;
+	text-decoration: underline;
+	text-transform: capitalize;
+}
+.dos{
+	font-family: "Times New Roman" serif;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: justify;
+	text-decoration: overline;
+	text-decoration-style:dashed ;
+	text-decoration-color: greenyellow;
+}
+a{
+	text-decoration: none;
+	text-transform: lowercase;
+}

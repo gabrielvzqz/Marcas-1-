@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<listaventas xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+           xs:noNamespaceSchemaLocation="ejercicioCUATRO.xsd">
+    <venta>
+        <importe>23.34</importe>
+        <comprador>ACme</comprador>
+        <vendedor>SinPa</vendedor>
+        <fecha>2023-02-16</fecha>
+        <codigo>U677</codigo>
+    </venta>
+    <venta>
+        <importe>11.24</importe>
+        <comprador>SinPa</comprador>
+        <vendedor>SinPa</vendedor>
+        <fecha>2023-02-16</fecha>
+        <codigo>U677</codigo>
+    </venta>
+
+</listaventas>

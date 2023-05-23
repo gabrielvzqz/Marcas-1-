@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<catalogo>
+    <cd>
+        <título>The Dark Side of the Moon</título>
+        <artista>Pink Floyd</artista>
+        <año>1973</año>
+        <género>Progressive rock</género>
+        <canciones>11</canciones>
+    </cd>
+    <cd>
+        <título>Ride the Lightning</título>
+        <artista>Metallica</artista>
+        <año>1984</año>
+        <género>Heavy Metal</género>
+        <canciones>8</canciones>
+    </cd>
+    <cd>
+        <título>Thriller</título>
+        <artista>Michael Jackson</artista>
+        <año>1982</año>
+        <género>Pop</género>
+        <canciones>9</canciones>
+    </cd>
+    <cd>
+        <título>El Espiritu Del Vino</título>
+        <artista>Heroes del Silencio</artista>
+        <año>1996</año>
+        <género>Rock en Español</género>
+        <canciones>11</canciones>
+    </cd>
+    <cd>
+        <título>Use Your Illusion II</título>
+        <artista>Guns N' Roses</artista>
+        <año>1991</año>
+        <género>Hard rock</género>
+        <canciones>16</canciones>
+    </cd>
+</catalogo>

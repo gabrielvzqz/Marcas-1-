@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="arboles" type="tarboles"/>
+    <xs:complexType name="tarboles">
+        <xs:sequence>
+            <xs:element name="arbol" type="tarbol" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tarbol">
+        <xs:sequence>
+            <xs:element name="nombreLatin" type="xs:string"/>
+            <xs:element name="nombreComun" type="xs:string"/>
+            <xs:element name="vegetacion" type="xs:string"/>
+            <xs:element name="altura" type="xs:string"/>
+            <xs:element name="formaEstructura" type="xs:string"/>
+            <xs:element name="colorPrimavera" type="xs:string"/>
+            <xs:element name="resistenciaHeladas" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

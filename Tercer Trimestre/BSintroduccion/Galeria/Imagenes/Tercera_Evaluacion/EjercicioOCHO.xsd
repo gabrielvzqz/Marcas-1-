@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:esq="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!--elemento raiz listacursos-->
+    <xs:element name="listacursos" type="tLista"/>
+
+    <xs:complexType name="tLista">
+        <xs:sequence>
+            <xs:element name="curso" type="tCurso" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tCurso">
+        <xs:sequence>
+            <xs:element name="alumno" type="tAlumno" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--declaracion de grupo de algo-->
+    <xs:complexType name="tAlumno">
+        <xs:sequence>
+            <xs:group ref="tDatos" />
+            <xs:element name="listaasignaturas" type="tListaAsignaturas"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tListaAsignaturas">
+        <xs:sequence>
+            <xs:element name="asigantura" type="tAsignatura" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tAsignatura">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="profesor" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="tProfesor" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="tProfesor">
+        <xs:sequence>
+            <xs:element name="nrp" type="xs:string"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="ap1" type="xs:string"/>
+            <xs:element name="ap2" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:group name="tDatos">
+        <xs:sequence>
+            <xs:element name="dni" type="xs:string"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="ap1" type="xs:string"/>
+            <xs:element name="ap2" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+</xs:schema>

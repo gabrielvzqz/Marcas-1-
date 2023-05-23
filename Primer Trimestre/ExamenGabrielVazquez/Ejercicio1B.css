@@ -1,0 +1,22 @@
+body{
+	background-color: white;
+}
+div{
+	width: 35%;
+	height: 35%;
+	margin: auto;
+	text-align: center;
+	background-color: white;
+}
+table{
+	width: 50%;
+	height: 80%;
+	border: 0,1 em solid black;
+	margin: auto;
+	text-align: center;
+	background-color: white;
+	border-collapse: collapse;
+}
+td{
+	border: 1px solid black;
+}

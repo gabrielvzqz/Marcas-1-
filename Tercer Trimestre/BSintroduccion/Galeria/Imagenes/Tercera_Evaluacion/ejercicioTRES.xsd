@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="productos">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="raton" type="tipoComun"/>
+                <xs:element name="teclado" type="tipoComun"/>
+                <xs:element name="monitor" type="tipoComun"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+        <xs:complexType name="tipoComun">
+            <xs:sequence>
+                <xs:element name="codigo"/>
+                <xs:element name="nombre" minOccurs="0"/>
+                <xs:element name="descripcion" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+</xs:schema>

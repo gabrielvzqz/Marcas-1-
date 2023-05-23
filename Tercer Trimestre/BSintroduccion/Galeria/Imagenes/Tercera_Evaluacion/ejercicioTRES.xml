@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<productos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+              xs:noNamespaceSchemaLocation="ejercicioTRES.xsd">
+        <raton>
+            <codigo>54</codigo>
+            <nombre>raton</nombre>
+            <descripcion>HOLA</descripcion>
+        </raton>
+    <teclado>
+        <codigo>54</codigo>
+        <nombre>teclado</nombre>
+        <descripcion>BUENAS</descripcion>
+    </teclado>
+
+    <monitor>
+        <codigo>54</codigo>
+        <nombre>monitor</nombre>
+        <descripcion>TARDES</descripcion>
+    </monitor>
+</productos>

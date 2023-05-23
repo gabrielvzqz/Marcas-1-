@@ -1,0 +1,22 @@
+#titulo{
+	text-align: center;
+}
+
+#tabla{
+	align-items: center;
+	text-align: center;
+	margin: auto;
+	border:  3px;
+	width: 60%;
+	height: 60%;
+}
+
+td, tr{
+	text-align: center;
+	border: 1px groove black;
+}
+
+.imagen{
+	width: 10%;
+	height: 10%;
+}

@@ -1,0 +1,21 @@
+body{
+    justify-content: center;
+}
+div {
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+}
+div.uno{
+    border: 1px solid black;
+    margin-bottom: 5%;
+    margin-left: 0%;
+    float: left;
+}
+div.dos{
+    border: 1px solid black;
+    height: 30%;
+    width: 20%;
+    float: left;
+    margin-right: 10%;
+}

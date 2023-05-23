@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<listapedidos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="ejercicioDOS.xsd">
+    <pedido>
+        <cliente>Juan</cliente>
+        <importe>100</importe>
+        <direccion>Madrid</direccion>
+        <cod>127F</cod>
+    </pedido>
+    <pedido>
+        <cliente>Lucas</cliente>
+        <importe>346</importe>
+        <direccion>Barcerlona</direccion>
+        <cod>272Q</cod>
+    </pedido>
+    <pedido>
+        <cliente>Ana</cliente>
+        <importe>51</importe>
+        <direccion>Valencia</direccion>
+        <cod>KKW</cod>
+    </pedido>
+</listapedidos>

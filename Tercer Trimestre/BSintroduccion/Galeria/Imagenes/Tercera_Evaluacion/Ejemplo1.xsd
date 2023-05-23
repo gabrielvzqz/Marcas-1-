@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="edad" type="tEdad"/>
+
+    <xs:simpleType name="tEdad">
+        <xs:restriction base="xs:integer">
+            <xs:maxInclusive value="65"/>
+            <xs:minInclusive value="16"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

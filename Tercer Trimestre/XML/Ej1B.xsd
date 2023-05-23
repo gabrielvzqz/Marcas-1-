@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="musica" type="tmusica"/>
+    <xs:complexType name="tmusica">
+        <xs:sequence>
+            <xs:element name="musicos" type="tmusicos"/>
+            <xs:element name="obras" type="tobras"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tmusicos">
+        <xs:sequence>
+            <xs:element name="musico" type="tmusico" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tobras">
+        <xs:sequence>
+            <xs:element name="obra" type="tobra" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tmusico">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="fechas" type="tfechas"/>
+            <xs:element name="pais"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="tobra">
+        <xs:sequence>
+            <xs:element name="autor" type="xs:string"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="genero" type="tgenero"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tfechas">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="nacimiento" type="xs:int"/>
+                <xs:attribute name="muerte" type="xs:int"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="tgenero">
+        <xs:sequence>
+            <xs:element name="instrumento" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="nombre" type="xs:string" use="optional"/>
+    </xs:complexType>
+</xs:schema>

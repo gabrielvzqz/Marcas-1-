@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pedido" type="tipoPedido"/>
+       <xs:complexType name="tipoPedido">
+           <xs:sequence>
+               <xs:element name="tractor" type="tipoTractor" maxOccurs="unbounded"/>
+           </xs:sequence>
+       </xs:complexType>
+    <xs:complexType name="tipoTractor">
+        <xs:sequence>
+            <xs:element name="componente" type="tipoComponente" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tipoComponente">
+        <xs:sequence>
+            <xs:element name="fechaentrega" type="tipoFecha" minOccurs="0"/>
+            <xs:element name="fragil" type="tipoFragil" minOccurs="0"/>
+            <xs:element name="nofragil" type="tipoNoFragil" minOccurs="0"/>
+            <xs:element name="peso" type="tipoPeso"/>
+            <xs:element name="numserie" type="xs:string"/>
+            <xs:element name="kmmaximos" type="xs:int" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="nombrefabricante" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="tipoFecha">
+        <xs:sequence>
+            <xs:element name="dia" type="xs:int" minOccurs="0"/>
+            <xs:element name="mes" type="xs:int"/>
+            <xs:element name="anio" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tipoFragil">
+    </xs:complexType>
+    <xs:complexType name="tipoNoFragil">
+    </xs:complexType>
+   <xs:complexType name="tipoPeso">
+       <xs:simpleContent>
+           <xs:extension base="xs:int">
+               <xs:attribute name="unidad" type="xs:string"/>
+               <xs:attribute name="tipoPeso" type="xs:string"/>
+           </xs:extension>
+       </xs:simpleContent>
+   </xs:complexType>
+</xs:schema>

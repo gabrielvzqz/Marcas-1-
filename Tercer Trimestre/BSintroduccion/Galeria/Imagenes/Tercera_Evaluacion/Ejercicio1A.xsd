@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="hitchcock" type="tHitchcock"/>
+    <xs:complexType name="tHitchcock">
+        <xs:sequence>
+            <xs:element name="estudios" type="tEstudios"/>
+            <xs:element name="actores" type="tActores"/>
+            <xs:element name="peliculas" type="tPeliculas"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tEstudios">
+        <xs:sequence>
+            <xs:element name="estudio" type="tEstudio" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tEstudio">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="fecha" type="tFecha"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="tFecha">
+        <xs:simpleContent>
+            <xs:extension base="xs:int">
+                <xs:attribute name="dato" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="tActores">
+        <xs:sequence>
+            <xs:element name="actor" type="tActor" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tActor">
+        <xs:attribute name="nombre" type="xs:string" use="required"/>
+        <xs:attribute name="nacimiento" type="xs:int" use="required"/>
+        <xs:attribute name="muerte" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="tPeliculas">
+        <xs:sequence>
+            <xs:element name="pelicula" type="tPelicula" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tPelicula">
+        <xs:sequence>
+            <xs:element name="titulo" type="tTitulo" maxOccurs="unbounded"/>
+            <xs:element name="fecha" type="tFecha"/>
+            <xs:element name="estudios" type="tEst"/>
+            <xs:element name="oscar" type="tOscar"/>
+            <xs:element name="actores" type="tAct"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tTitulo">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="lang" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="tEst">
+        <xs:attribute name="nombre" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="tOscar">
+        <xs:attribute name="nominaciones" type="xs:int" use="required"/>
+        <xs:attribute name="premios" type="xs:int" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="tAct">
+        <xs:sequence>
+            <xs:element name="actor" type="xs:string"/>
+            <xs:element name="actriz" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

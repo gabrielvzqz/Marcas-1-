@@ -1,0 +1,43 @@
+body {
+    margin: 40px;
+}
+
+/*trabajamos a tres columnas pero NO auto*/
+.wrapper {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: [pilar1] 200px [pilar2] 200px [pilar3] 200px [pilar4];
+    grid-template-rows: [hilera1] auto [hilera2] auto [hilera3];
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+}
+
+/*dar formato a todos los items*/
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+/*Cuando se el usa grid-area el orden es rs/cs/re/ce*/
+.a {
+grid-column: pilar1/ pilar3;
+grid-row: hilera1;
+}
+.b {
+
+grid-column: pilar3;
+grid-row: hilera1/ span3;
+}
+.c {
+grid-column: pilar1 ;
+grid-row: hilera2;
+}
+.d {
+grid-column: pilar2;
+grid-row: hilera2;
+}

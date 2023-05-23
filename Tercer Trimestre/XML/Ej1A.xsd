@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="hitchcock" type="thitchcock"/>
+    <xs:complexType name="thitchcock">
+        <xs:sequence>
+            <xs:element name="estudios" type="testudios"/>
+            <xs:element name="actores" type="tactores"/>
+            <xs:element name="peliculas" type="tpeliculas"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="testudios">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="estudio" type="testudio"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tactores">
+        <xs:sequence>
+            <xs:element name="actor" maxOccurs="unbounded" type="tactor"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tpeliculas">
+        <xs:sequence>
+            <xs:element name="pelicula" maxOccurs="unbounded" type="tpelicula"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="testudio">
+        <xs:sequence>
+            <xs:element name="nombre" maxOccurs="unbounded"/>
+            <xs:element name="fecha" maxOccurs="unbounded" type="tfecha"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="tpelicula">
+        <xs:sequence>
+            <xs:element name="titulo" maxOccurs="unbounded" type="ttitulo"/>
+            <xs:element name="fecha" maxOccurs="unbounded" type="tfecha"/>
+            <xs:element name="estudios" maxOccurs="unbounded" type="tnombre"/>
+            <xs:element name="oscar" maxOccurs="unbounded" type="toscar"/>
+            <xs:element name="actores" maxOccurs="unbounded" type="tactoractriz"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tactoractriz">
+        <xs:sequence>
+            <xs:element name="actor" maxOccurs="unbounded" type="xs:string"/>
+            <xs:element name="actriz" maxOccurs="unbounded" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tfecha">
+        <xs:simpleContent>
+            <xs:extension base="xs:int">
+                <xs:attribute name="dato" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="tactor">
+        <xs:attributeGroup ref="tatributos"/>
+    </xs:complexType>
+    <xs:attributeGroup name="tatributos">
+        <xs:attribute name="nombre" type="xs:string" use="optional"/>
+        <xs:attribute name="nacimiento" type="xs:int" use="optional"/>
+        <xs:attribute name="muerte" type="xs:string" use="optional"/>
+    </xs:attributeGroup>
+    <xs:complexType name="ttitulo">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="lang" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="tnombre">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="nombre" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="toscar">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="nominaciones"/>
+                <xs:attribute name="premios"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

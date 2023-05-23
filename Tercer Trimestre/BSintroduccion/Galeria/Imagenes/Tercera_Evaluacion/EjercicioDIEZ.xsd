@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="operaciones" type="tOperaciones"/>
+    <xs:complexType name="tOperaciones">
+        <xs:sequence>
+            <xs:element name="operacion" type="tOperacion" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tOperacion">
+        <xs:sequence maxOccurs="unbounded">
+        <xs:choice>
+            <xs:element name="venta" type="tVenta"/>
+            <xs:element name="compra" type="tCompra"/>
+        </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tVenta">
+        <xs:sequence>
+            <xs:element name="titulosvendidos" type="tTitulosvendidos"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tTitulosvendidos">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="cantidadtotal" type="xs:int"/>
+            <xs:element name="entregado" type="tEntregado" minOccurs="0"/>
+            <xs:element name="importe" type="tImporte"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--elemento vacio-->
+    <xs:complexType name="tEntregado">
+    </xs:complexType>
+
+    <!--Declaracion de atributo para un elemento simple-->
+    <xs:complexType name="tImporte">
+        <xs:simpleContent>
+            <xs:extension base="xs:int">
+                <xs:attribute name="moneda" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="tCompra">
+        <xs:sequence>
+            <xs:element name="tituloscomprados" type="tTituloscomprados"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tTituloscomprados">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="proveedor" type="xs:string"/>
+            <xs:element name="fechacompra" type="tFechacompra"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tFechacompra">
+        <xs:sequence>
+            <xs:element name="dia" type="xs:int"/>
+            <xs:element name="mes" type="xs:int"/>
+            <xs:element name="anio" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

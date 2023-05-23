@@ -1,0 +1,22 @@
+#contenedor{
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-image: url("sainte.png");
+}
+h1, h2, h3{
+	text-align: center;
+}
+
+.caja{
+	width: 10%;
+	background-color: yellow;
+	float: left;
+	padding: 10px;
+	margin: 20px;
+}
+body{
+	background-color: #336699;
+}

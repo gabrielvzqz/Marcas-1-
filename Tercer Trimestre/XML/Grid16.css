@@ -1,0 +1,53 @@
+body {
+    margin: 40px;
+  }
+  
+  .wrapper {
+    list-style: none;
+    display: grid;
+    width: 400px;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #fff;
+    color: #ffbb69;
+  }
+
+  .card {
+    background-color: #ffbb69;
+    color: #de7a02;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+
+  }
+  .yaveremos{
+    width: fit-content;
+    border: 3px solid skyblue;
+    padding: 10px 20px;
+  }
+
+  .a {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .b {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .c {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .d {
+     grid-column: 1;
+    grid-row: 2;
+  }
+  .e {
+     grid-column: 2;
+    grid-row: 2;
+  }
+  .f {
+    grid-column: 3;
+    grid-row: 2;
+  }

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="listado" type="tListado"/>
+    <xs:complexType name="tListado">
+        <xs:sequence>
+            <xs:element name="afiliado" type="tAfiliado" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tAfiliado">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="DNI" type="xs:string"/>
+                <xs:element name="NIE" type="xs:string"/>
+            </xs:choice>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="apellidos" type="xs:string"/>
+            <xs:element name="situacion_laboral" type="tLaboral"/>
+            <xs:element name="fecha_nacimiento" type="tFecha"/>
+            <xs:element name="listado_bajas" type="tLBajas" minOccurs="0"/>
+            <xs:element name="listado_prestaciones" type="tLPrestaciones"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tLBajas">
+        <xs:sequence>
+            <xs:element name="baja" type="tBaja" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tBaja">
+        <xs:sequence>
+            <xs:element name="causa" type="xs:string"/>
+            <xs:element name="fecha_inicio" type="tFecha"/>
+            <xs:element name="fecha_final" type="tFecha" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tLPrestaciones">
+        <xs:sequence>
+            <xs:element name="prestacion" type="tPrestacion" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tPrestacion">
+        <xs:sequence>
+            <xs:element name="cantidad" type="xs:float"/>
+            <xs:element name="inicio" type="tFecha"/>
+            <xs:element name="final" type="tFecha" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tLaboral">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="en_paro"/>
+            <xs:enumeration value="en_activo"/>
+            <xs:enumeration value="jubilado"/>
+            <xs:enumeration value="edad_no_laboral"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="tFecha">
+        <xs:sequence>
+            <xs:element name="dia" type="xs:int"/>
+            <xs:element name="mes" type="xs:int"/>
+            <xs:element name="año" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

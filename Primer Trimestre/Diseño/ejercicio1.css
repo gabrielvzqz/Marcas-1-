@@ -1,0 +1,20 @@
+/*ficherp de estilos para ejercicio1.html*/
+body{
+	background-color: aqua;
+}
+p{
+	text-align: center;
+	font-family: verdana;
+	color: blue;
+}
+p.uno{
+	background-color: silver;
+}
+p.dos{
+	text-align: right;
+	font-size: 20px;
+}
+
+span{
+	color: red;
+}

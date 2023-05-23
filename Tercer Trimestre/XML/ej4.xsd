@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <xsi:element name="listaventas">
+        <xsi:complexType>
+            <xsi:sequence maxOccurs="unbounded">
+                <xsi:choice maxOccurs="unbounded">
+                    <xsi:element name="ventapc"/>
+                    <xsi:element name="ventamonitor"/>
+                </xsi:choice>
+            </xsi:sequence>
+        </xsi:complexType>
+    </xsi:element>
+</xsi:schema>

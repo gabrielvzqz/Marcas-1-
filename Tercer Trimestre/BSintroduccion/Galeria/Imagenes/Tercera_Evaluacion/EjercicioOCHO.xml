@@ -1,0 +1,20 @@
+<listacursos>
+  <!--1 or more repetitions:-->
+  <curso>
+    <!--1 or more repetitions:-->
+    <alumno>
+      <dni>string</dni>
+      <nombre>string</nombre>
+      <apellidoUno>string</apellidoUno>
+      <!--Optional:-->
+      <apellidoDos>string</apellidoDos>
+      <listaasignaturas>
+        <!--1 or more repetitions:-->
+        <asigantura tProfesor="string">
+          <nombre>string</nombre>
+          <profesor>string</profesor>
+        </asigantura>
+      </listaasignaturas>
+    </alumno>
+  </curso>
+</listacursos>

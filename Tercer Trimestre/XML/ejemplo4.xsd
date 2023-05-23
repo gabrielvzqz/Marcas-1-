@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cantidad" type="tipoCantida"/>
+
+    <xs:complexType name="tipoCantida">
+        <xs:simpleContent>
+            <xs:extension base="xs:float">
+                <xs:attribute name="divisa" type="tipoDivisa" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:simpleType name="tipoDivisa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="dolares"/>
+            <xs:enumeration value="euros"/>
+            <xs:enumeration value="yenes"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

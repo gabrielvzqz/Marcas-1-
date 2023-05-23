@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="operaciones" type="tipoOperaciones"/>
+    <xs:complexType name="tipoOperaciones">
+        <xs:sequence>
+            <xs:element name="operacion" minOccurs="1" maxOccurs="unbounded" type="tipoOperacion"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoOperacion">
+        <xs:sequence maxOccurs="unbounded">
+        <xs:choice>
+            <xs:element name="venta" type="tipoVenta"/>
+            <xs:element name="compra" type="tipoCompra"/>
+        </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoVenta">
+        <xs:sequence>
+            <xs:element name="titulosvendidos" type="tipoTV"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoTV">
+        <xs:sequence>
+            <xs:element name="titulo" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+            <xs:element name="cantidadtotal" minOccurs="1" maxOccurs="unbounded" type="xs:integer"/>
+            <xs:element name="entregado" type="tipoEntregado" minOccurs="0"/>
+            <xs:element name="importe" type="tipoImporte"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!--element vacio-->
+    <xs:complexType name="tipoEntregado">
+    </xs:complexType>
+    <!--delcaracion de atribtuo para un elemento simple-->
+    <xs:complexType name="tipoImporte">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="moneda" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="tipoCompra">
+        <xs:sequence>
+            <xs:element name="tituloscomprados" type="tipoTC"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoTC">
+        <xs:sequence>
+            <xs:element name="titulo" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+            <xs:element name="proveedor" minOccurs="1" maxOccurs="1" type="xs:string"/>
+            <xs:element name="fechacompra" type="tipoFC"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoFC">
+        <xs:sequence>
+            <xs:element name="dia" type="xs:integer"/>
+            <xs:element name="mes" type="xs:integer"/>
+            <xs:element name="anio" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

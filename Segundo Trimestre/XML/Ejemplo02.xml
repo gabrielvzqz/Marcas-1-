@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coleccion_cds>
+<cd>
+    <titulo>Más Allá del Jardín Hay Flores</titulo>
+    <precio>$5.95</precio>
+    <artista>Sacgoga</artista>
+    <Lanzamiento>2023</Lanzamiento>
+</cd>
+<cd>
+    <titulo>La Tour Liffee</titulo>
+    <precio>$9.95</precio>
+    <artista>Delaossa</artista>
+    <Lanzamiento>2020</Lanzamiento>
+</cd>
+<cd>
+    <titulo>Nothing was the same</titulo>
+    <precio>$14.95</precio>
+    <artista>Drake</artista>
+    <Lanzamiento>2013</Lanzamiento>
+</cd>
+<cd>
+    <titulo>1999</titulo>
+    <precio>$10.50</precio>
+    <artista>Joey Bada$$</artista>
+    <Lanzamiento>2012</Lanzamiento>
+</cd>
+<cd>
+    <titulo>X 100PRE</titulo>
+    <precio>$12.95</precio>
+    <artista>Bad Bunny</artista>
+    <Lanzamiento>2018</Lanzamiento>
+</cd>
+</coleccion_cds>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<listapedidos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+             xs:noNamespaceSchemaLocation="ejercicioDOS.xsd">
+    <pedido>
+        <numeroSerie>54</numeroSerie>
+        <cantidad>7</cantidad>
+        <peso>8976</peso>
+    </pedido>
+    <pedido>
+        <numeroSerie>765</numeroSerie>
+        <cantidad>089</cantidad>
+        <peso>68</peso>
+    </pedido>
+    <pedido>
+    <numeroSerie>123</numeroSerie>
+    <cantidad>543</cantidad>
+    <peso>6</peso>
+</pedido>
+</listapedidos>

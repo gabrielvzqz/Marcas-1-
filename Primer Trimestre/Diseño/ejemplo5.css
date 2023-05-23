@@ -1,0 +1,62 @@
+/*estilos para ejemplo4
+
+/*usamos diferentes id para caracterizar con propiedades css
+-un contenedor
+	-una cabecera
+	-unas columnas (dos)
+		-un menu
+		-un contenido
+	-un pie*/
+
+span.ventaja{
+	color: red;
+}
+#democrats {
+	background:blue; 
+}
+#republicans {
+	background:red; 
+}
+div{
+	font-size: 1.2em;
+	margin: 10px auto;
+	width: 85%;
+	background-color: #ddd;
+}
+a{
+	font-size: 1.2em;
+	text-decoration: none;
+}
+a:link{
+	color: #6699CC;
+}
+a:visited{
+	color: #660099;
+}
+a:active{
+	background-color: #FFFF00;
+}
+a:hover{
+	color: blue;
+	font-style: italic;
+	letter-spacing: 10px;
+	font-weight: bolder;
+	text-transform: uppercase;
+	background-color: yellow;
+}
+a.blanco{
+	color: #FFBB00;
+	background-color: #ddd;
+	letter-spacing: none;
+	font-style: normal;
+	text-transform: none;
+	letter-spacing: normal;
+}
+a.tinto{
+	color: #800000;
+	background-color: #ddd;
+	letter-spacing: none;
+	font-style: normal;
+	text-transform: none;
+	letter-spacing: normal;
+}

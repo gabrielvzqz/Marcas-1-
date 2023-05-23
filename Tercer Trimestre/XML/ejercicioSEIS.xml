@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="ejercicioSEIS.xsd">
+
+    <lapiz>
+        <dureza>muy duro</dureza>
+    </lapiz>
+
+    <cuaderno>
+        <numhojas>408</numhojas>
+        <estilo>Literatura</estilo>
+    </cuaderno>
+
+    <boligrafo>
+        <precio>575.80</precio>
+        <color>Rojo</color>
+    </boligrafo>
+</inventario>

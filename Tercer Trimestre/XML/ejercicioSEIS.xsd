@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--elemento raiz tipo lo definieremos mas adelante-->
+    <xs:element name="inventario" type="tipoInventario"/>
+    <!--Dentro de inventario pueden ir elementos <lapiz>, <cuaderno> o <boligrafo> repetidos y en cualquier orden-->
+    <xs:complexType name="tipoInventario">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:choice>
+                <xs:element name="lapiz" type="tipoLapiz">
+
+                </xs:element>
+                <xs:element name="cuaderno" type="tipoCuaderno">
+
+                </xs:element>
+                <xs:element name="boligrafo" type="tipoBoligrafo">
+
+                </xs:element>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--tipo lapiz-->
+    <xs:complexType name="tipoLapiz">
+        <xs:sequence>
+            <xs:element name="dureza" minOccurs="0" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!--tipo cuaderno-->
+    <xs:complexType name="tipoCuaderno">
+        <xs:sequence>
+            <xs:element name="numhojas" minOccurs="1" type="xs:string"/>
+            <xs:element name="estilo" minOccurs="1" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!--tipo boligrafo-->
+    <xs:complexType name="tipoBoligrafo">
+        <xs:sequence>
+            <xs:element name="precio"   minOccurs="1" type="xs:double"/>
+            <xs:element name="color" minOccurs="0" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
