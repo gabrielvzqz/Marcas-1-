@@ -42,3 +42,6 @@ Album Kanye
 
 https://gabrielvzqz.github.io/Marcas-1-/Tercer%20Trimestre/BSintroduccion/AlbumKanye/index.html#
 
+Pricing Examen
+
+https://gabrielvzqz.github.io/Marcas-1-/Tercer%20Trimestre/BSintroduccion/PricingExamen/index.html#
