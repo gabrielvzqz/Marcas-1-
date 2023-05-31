@@ -37,3 +37,8 @@ https://gabrielvzqz.github.io/Marcas-1-/Tercer%20Trimestre/BSintroduccion/jumbot
 Ejemplo
 
 https://gabrielvzqz.github.io/Marcas-1-/Tercer%20Trimestre/BSintroduccion/Ejemplo/index.html
+
+Album Kanye
+
+https://gabrielvzqz.github.io/Marcas-1-/Tercer%20Trimestre/BSintroduccion/AlbumKanye/index.html#
+
